@@ -127,6 +127,28 @@
     gap: 1.5rem;
   }
 
+  a {
+    color: $color-gray;
+    transition: all 500ms;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-left: 7px solid #010c80;
+      border-bottom: 4px solid transparent;
+      margin-right: 0.5rem;
+      transform: translateY(-2px);
+    }
+  }
+
   table {
     thead {
       border: 0;
@@ -135,13 +157,16 @@
       color: $color-dark;
     }
     th {
-      font-weight: 400;
+      font-weight: 600;
     }
 
     th,
     td {
       border-color: $color-gray-light;
       padding: 1rem;
+    }
+    td {
+      color: $color-primary;
     }
   }
 }

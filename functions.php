@@ -26,6 +26,7 @@ register_nav_menus( array(
     'footer_navi' => __( 'Navigacija apačioje', 'neurology' ),
     'useful_links' => __( 'Naudingos nuorodos', 'neurology' ),
     'footer_contacts' => __( 'Kontaktai apačioje', 'neurology' ),
+    'side_menu' => __( 'Šonins meniu puslapiuose', 'neurology' ),
 ) );
 
 
@@ -117,6 +118,28 @@ function my_register_sidebars() {
 		array(
             'name'          => __( 'Nuotrauka apačioje' ),
 			'id'            => 'footer_img',
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	register_sidebar(
+		array(
+            'name'          => __( 'Svarbi informacija' ),
+			'id'            => 'important_info',
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+	register_sidebar(
+		array(
+            'name'          => __( 'Apie daktarą' ),
+			'id'            => 'about_doctor',
 			'description'   => __( 'A short description of the sidebar.' ),
 			'before_widget' => '',
 			'after_widget'  => '',

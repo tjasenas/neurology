@@ -1,13 +1,16 @@
 @use '../abstracts/' as *;
 
-input[type="submit"] {
+input[type="submit"], .wp-block-button__link {
     background-color: $color-primary;
     color: #fff;
     padding: 0.5rem 1rem;
     border: 0;
     cursor: pointer;
+    border-radius: 0;
+    font-size: 1rem;
     transition: background-color 300ms ease-in-out;
 }
-input[type="submit"]:hover {
+input[type="submit"]:hover, .wp-block-button__link:hover {
     background: $color-dark;
+    text-decoration: none;
 }

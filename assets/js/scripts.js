@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     i--;
     if (i === 0) goBackEl.remove();
     
+
+    
   });
 
 
@@ -48,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     elLink.addEventListener("click", function (e) {
       e.preventDefault();
       i++;
+
+
       subMenu.classList.add(`level-${i}`);
       naviHeader.prepend(goBackEl);
       subMenu.style.display = "block";
@@ -66,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-  })
+  });
+
+
 
 
 

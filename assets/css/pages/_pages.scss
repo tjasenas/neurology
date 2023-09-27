@@ -1,0 +1,147 @@
+@use "../abstracts/" as *;
+
+.single-page {
+  @include lg {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+
+  @include xl {
+    grid-template-columns: 370px 1fr;
+  }
+
+  aside {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+}
+
+.important-info {
+  border: 1px solid $color-primary;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: #f4f4f4;
+  margin: 3rem 0;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  h4 {
+    color: $color-primary;
+    margin-left: 1rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+}
+
+.about-widget {
+  img {
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.ct-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+
+  @include lg {
+    grid-template-columns: 1fr 30%;
+    gap: 2rem;
+  }
+}
+
+.ct-other {
+  max-width: 350px;
+  flex-shrink: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+  }
+  a {
+    display: block;
+    transition: all 0.5s;
+    margin-top: 0.2rem;
+    color: $color-gray;
+  }
+  a:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+  span {
+    font-size: 1.1rem;
+    color: $color-dark;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px dashed #222;
+    padding: 0.7rem;
+  }
+}
+.cs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 980px) {
+  .cs-wrapper {
+    flex-direction: row;
+  }
+}
+
+.contact-map {
+  margin-top: 3rem;
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+.simple-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  table {
+    thead {
+      border: 0;
+      background-color: $color-gray-light;
+      text-transform: uppercase;
+      color: $color-dark;
+    }
+    th {
+      font-weight: 400;
+    }
+
+    th,
+    td {
+      border-color: $color-gray-light;
+      padding: 1rem;
+    }
+  }
+}

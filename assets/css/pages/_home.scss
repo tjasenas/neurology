@@ -6,7 +6,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-  @include xl {
+  @include lg {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -70,7 +70,7 @@
   row-gap: 4rem;
   column-gap: 1.5rem;
 
-  @include xl {
+  @include lg {
     flex-direction: row;
     align-items: flex-start;
     row-gap: 0;

@@ -20,8 +20,6 @@
     transform: translateX(0%);
   }
 
-  
-
   &__header {
     display: flex;
     justify-content: space-between;
@@ -36,7 +34,7 @@
       font-weight: 400;
     }
 
-    .move-back{
+    .move-back {
       cursor: pointer;
       background-color: #444444;
       svg {
@@ -68,12 +66,9 @@
     position: relative;
     transition: all 200ms;
 
-
-
     li.menu-item-has-children > a::after {
-      content: '';
+      content: "";
 
-     
       width: 10px;
       height: 10px;
       display: block;
@@ -173,7 +168,8 @@
     background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    row-gap: 2rem;
+    column-gap: 3rem;
     box-shadow: 2px 2px 5px 1px #0000000d, -2px 0 5px 1px #0000000d;
 
     & > li > a {
@@ -184,7 +180,6 @@
       color: $color-dark;
       margin-bottom: 0.7rem;
       display: block;
-     
 
       &:hover {
         text-decoration: none;
@@ -228,8 +223,6 @@
   }
 }
 
-
-
 .side-menu {
   list-style: none;
   margin: 0;
@@ -239,8 +232,6 @@
   & > li {
     border-bottom: 1px solid $color-gray-light;
   }
-
-
 
   & > li > a {
     display: block;
@@ -252,7 +243,7 @@
       text-decoration: none;
     }
   }
-  
+
   li.current_page_item > a {
     color: $color-primary;
   }
@@ -262,13 +253,12 @@
     margin: 0;
     padding: 0;
 
-    
     a {
       display: block;
       padding: 0.6rem 1rem;
       color: $color-gray;
       transition: all 500ms;
-      
+
       &:hover {
         text-decoration: none;
         color: $color-primary;
@@ -276,19 +266,16 @@
 
       &:before {
         content: "";
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-top: 4px solid transparent;
-          border-left: 6px solid #010c80;
-          border-bottom: 4px solid transparent;
-          margin-right: 0.5rem;
-          transform: translateY(-2px);
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-left: 6px solid #010c80;
+        border-bottom: 4px solid transparent;
+        margin-right: 0.5rem;
+        transform: translateY(-2px);
       }
-
     }
-
-
 
     & li:first-child a {
       padding: 0rem 1rem 0.6rem 1rem;

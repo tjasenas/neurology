@@ -1,6 +1,11 @@
 @use "../abstracts/" as *;
 
-.single-page {
+#breadcrumbs {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.offer-page {
   @include lg {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -26,6 +31,9 @@
   border-radius: 0.3rem;
   background-color: #f4f4f4;
   margin: 3rem 0;
+  figure {
+    flex-shrink: 0;
+  }
 
   img {
     width: 30px;
@@ -167,6 +175,69 @@
     }
     td {
       color: $color-primary;
+    }
+  }
+}
+
+.about-content {
+  h3 {
+    font-size: 1.2rem;
+  }
+  ul {
+    padding-left: 1rem;
+    margin: 0 0 1rem 0;
+    li {
+      padding: 0.2rem 0;
+    }
+  }
+
+  .wp-block-columns {
+    gap: 0;
+
+    @include md {
+      margin-bottom: 0;
+
+      & > div:first-child {
+        border-top: 1px solid $color-gray-light;
+        border-right: 1px solid $color-gray-light;
+        padding: 1.5rem;
+      }
+      & > div:last-child {
+        border-top: 1px solid $color-gray-light;
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      }
+    }
+  }
+  .wp-block-columns:first-child {
+    margin-bottom: 3rem;
+    img {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include md {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    & > div:first-child {
+      border: 0;
+      padding: 0;
+    }
+    & > div:last-child {
+      border: 0;
+      padding-top: 0;
+    }
+  }
+  .wp-block-columns:last-child {
+    @include md {
+      & > div:first-child {
+        border-bottom: 1px solid $color-gray-light;
+      }
+      & > div:last-child {
+        border-bottom: 1px solid $color-gray-light;
+      }
     }
   }
 }
